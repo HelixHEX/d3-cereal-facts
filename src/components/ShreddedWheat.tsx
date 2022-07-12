@@ -35,6 +35,7 @@ const ShreddedWheat = () => {
   //   .filter((_, index) => index < 5);
   return (
     <BarGraph
+    marginBottom={155}
       width={"100%"}
       height={"100%"}
       yRange={20}
