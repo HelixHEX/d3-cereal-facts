@@ -5,6 +5,7 @@ import data from "../data";
 
 const TopCereal = () => {
   const style = useBreakpointValue({ base: true, md: false });
+  const fontSize = useBreakpointValue({base: '20px', md: '40px'});
   let newData = data
     .sort((a, b) => a.rating - b.rating)
     .reverse()
@@ -13,18 +14,18 @@ const TopCereal = () => {
     <BarGraph
       width={"100%"}
       height={"100%"}
-      yRange={100}
+      yRange={20}
       xValue="name"
-      yValue="rating"
+      yValue="carbo"
       data={newData}
-      ticks={3}
+      ticks={10}
       axisStyles={{
         color: "black",
-        "font-size": "14px",
+        "font-size": '14px',
         "font-family": 'Courier New'
       }}
-      title="Most popular cereals"
-      titleStyles={{ color: "black", fontSize: "40px", fontFamily: 'Courier New' }}
+      title="Most popular cereals and their carbs"
+      titleStyles={{ color: "black", fontSize: fontSize, fontFamily: 'Courier New' }}
       xAxisSlanted={style}
       colors={["#9F7AEA", "#0BC5EA", "#FFC107", "#00C853", "#FF9800"]}
     />
