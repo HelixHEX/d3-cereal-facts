@@ -4,7 +4,7 @@ import ShreddedWheat from "./components/ShreddedWheat";
 import TopCereal from "./components/TopCereal";
 
 const App = () => {
-  const [currentGraph, setCurrentGraph] = useState("shredded");
+  const [currentGraph, setCurrentGraph] = useState("topCereal");
   return (
     <>
       <Flex w="100%" h="100vh" p={{ base: 2, sm: 10, md: 20 }}>
